@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron text-center" style="background-image: url('https://st3.depositphotos.com/5531122/19330/i/1600/depositphotos_193307968-stock-photo-white-desk-office-with-laptop.jpg'); height: 1200px; font-family: Arial;">
+    <h1 class="display-3" style="color: gray;"  >QVBlog.VN</h1>
+    <p class="lead" style="color: red;">Nơi bạn gửi gắm tâm tư</p>
+    <hr>
+    <h1>Đăng Ký</h1>
+    <br>
+    <th:block th:if="${message}">
+        <p th:text="${message}"></p>
+    </th:block>
+    <form th:action="@{/dangKy.html}" th:object="${account}" method="post">
+        <div class="form-group">
+            <label style="color:green;" for="">Username</label>
+            <br>
+            <input type="text" th:field="*{userName}" width="50px">
+            <br>
+            <label style="color:green;" for="">Password</label>
+            <br>
+            <input type="password" th:field="*{passWord}"width="50px">
+            <br>
+            <label style="color:green;" for="">Họ Tên</label>
+            <br>
+            <input type="text" th:field="*{name}"width="50px">
+            <br>
+            <label style="color:green;" for="">SĐT</label>
+            <br>
+            <input type="text" th:field="*{phoneNumber}" width="50px">
+            <br>
+            <label style="color:green;" for="">Email</label>
+            <br>
+            <input type="text" th:field="*{email}" width="50px">
+            <br><br>
+            <button class="btn btn-primary" type="submit">Đăng Ký</button>
+        </div>
+    </form>
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

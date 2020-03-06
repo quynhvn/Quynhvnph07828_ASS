@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Trang chu</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div  class="jumbotron text-center" style="background-image: url('https://st3.depositphotos.com/5531122/19330/i/1600/depositphotos_193307968-stock-photo-white-desk-office-with-laptop.jpg'); height: 1200px; font-family: Arial;">
+    <h1 class="display-3" style="color: gray;"  >QVBlog.VN</h1>
+    <p class="lead" style="color: red;">Nơi bạn gửi gắm tâm tư</p>
+    <hr>
+    <h1>Đăng Nhập</h1>
+    <br>
+
+    <form class="form-group" th:action="@{/login.html}" method="POST" >
+        <div class="alert alert-danger" th:if="${errorLogin != null}"
+             style="text-align: left; color: red; font-weight: bold; font-size: 13px"
+             th:text="${errorLogin}"></div>
+        <label>Tên Đăng Nhập</label>
+        <br>
+        <input type="text" name="username"  placeholder="" width="50px">
+        <br><br>
+        <label>Mật Khẩu</label>
+        <br>
+        <input type="password" name="password"  placeholder="" width="50px">
+        <br><br>
+        <button class="btn btn-primary" type="submit">Đăng Nhập</button>
+        <a name="" id="" class="btn btn-primary" href="dangKy.html" role="button">Đăng Ký</a>
+    </form>
+
+
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bạn có chắc chắn muốn xóa bài viết này?</h1>
+<br>
+<form th:action="@{/deletePost.html}" th:object="${post}" method="post">
+    <input type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td><button class="btn btn-primary" type="submit">Xóa Bài Viết</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
